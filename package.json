@@ -10,6 +10,9 @@
   "author": "steveb <steveb@motabilityoperations.co.uk>",
   "license": "ISC",
   "dependencies": {
-    "playwright": "1.14.1"
+    "@ffmpeg-installer/ffmpeg": "1.1.0",
+    "expect": "27.1.1",
+    "playwright": "1.14.1",
+    "playwright-video": "2.4.0"
   }
 }
