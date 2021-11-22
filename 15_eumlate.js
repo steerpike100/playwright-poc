@@ -10,3 +10,19 @@ const { chromium } = require('playwright');
 
   await page.goto('https://todomvc.com/examples/react/#/');
 })();
+
+
+const puppeteer = require('puppeteer');
+const browser = await puppeteer.launch()
+const page = await browser.newPage()
+await page.goto('https://todomvc.com/examples/react/#/')
+
+await page.setViewport({ width: 2560, height: 1329 })
+
+await page.waitForSelector('.learn-bar > .todoapp > div > .header > .new-todo')
+await page.click('.learn-bar > .todoapp > div > .header > .new-todo')
+
+await page.waitForSelector('.learn-bar > .todoapp > div > .header > .new-todo')
+await page.click('.learn-bar > .todoapp > div > .header > .new-todo')
+
+await browser.close()
